@@ -1,0 +1,17 @@
+#grandparent {
+	
+	width: 400px;
+    border: 1px dashed blue;
+}
+
+
+#parent {
+    margin: 25px;
+    border: 1px dashed green;
+}
+
+#child {
+	height: 200px;
+    margin: 25px;
+    border: 1px solid red;
+}

@@ -1,0 +1,13 @@
+#parent {
+	width: 160px;
+	border: 1px solid red;
+}
+#child {
+	margin-top:    30px; /* сверху */
+	margin-right:  20px; /* справа */
+	margin-bottom: 30px; /* снизу */
+	margin-left:   20px; /* слева */
+	
+	height: 80px;
+	border: 1px solid green;
+}

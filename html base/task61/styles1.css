@@ -1,0 +1,10 @@
+#parent {
+	width: 400px;
+	border: 1px solid blue;
+}
+
+#child {
+	height: 300px;
+	border: 1px solid yellow;
+	margin: 50px;
+}
