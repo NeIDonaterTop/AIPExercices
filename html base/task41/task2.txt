@@ -1,0 +1,11 @@
+<h2>text</h2>
+h2 {
+	font-size: 20px;
+	color: blue;
+}
+h2 {
+	font-style: italic;
+	color: red;
+}
+
+Свойства: красный цвет, шрифт курсивом, размер шрифта:20

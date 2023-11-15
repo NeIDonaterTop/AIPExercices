@@ -1,0 +1,9 @@
+<h2>text</h2>
+h2 {
+	font-size: 20px;
+}
+h2 {
+	font-size: 30px;
+}
+
+Размер: 30px
