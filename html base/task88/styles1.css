@@ -1,0 +1,12 @@
+.parent	{
+	display: flex;
+	flex-direction: row; /* главная ось слева направо */
+	justify-content: flex-end; /* блоки к концу главной оси */
+	border: 1px solid red;
+	height: 300px;
+}
+.child {
+	width: 100px;
+	height: 50px;
+	border: 1px solid green;
+}

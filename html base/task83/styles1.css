@@ -1,0 +1,16 @@
+.parent {
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid black;
+	text-align: justify;
+}
+.child {
+	float: right;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 100px;
+	height: 60px;
+	border: 1px solid green;
+}
