@@ -1,0 +1,10 @@
+.parent	{
+	display: inline-flex;
+	padding: 20px;
+	border: 1px solid red;
+}
+.child {
+	width: 115px;
+	height: 55px;
+	border: 1px solid green;
+}

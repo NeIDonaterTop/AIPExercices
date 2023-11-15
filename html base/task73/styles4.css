@@ -1,0 +1,9 @@
+.parent {
+	text-align: right;
+	border: 1px solid red;
+}
+.child {
+	display: inline-block;
+	margin-right: 10px;
+	border: 1px solid green;
+}

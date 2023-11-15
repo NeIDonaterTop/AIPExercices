@@ -1,0 +1,70 @@
+#parent {
+	border-radius: 50%;
+	position: relative;
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	border: 1px solid yellow;
+	background-color: yellow;
+	
+}
+
+#child {
+	border-radius: 50%;
+	position: absolute;
+	top: 70px;
+	left: 80px;
+	width: 80px;
+	height: 80px;
+	border: 1px solid white;
+	background-color: white;
+	z-index: 3;
+}
+
+#child2 {
+	border-radius: 50%;
+	position: absolute;
+	top: 70px;
+	right: 80px;
+	width: 80px;
+	height: 80px;
+	border: 1px solid white;
+	background-color: white;
+	z-index: 3;
+}
+
+#child3 {
+	border-radius: 50%;
+	position: absolute;
+	top: 200px;
+	left: 165px;
+	width: 80px;
+	height: 80px;
+	border: 1px solid white;
+	background-color: white;
+	z-index: 3;
+}
+
+#child4 {
+	border-radius: 50%;
+	position: absolute;
+	top: 155px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid white;
+	background-color: white;
+	z-index: 1;
+}
+
+#child5 {
+	border-radius: 50%;
+	position: absolute;
+	top: 30px;
+	left: 50px;
+	width: 300px;
+	height: 300px;
+	border: 1px solid yellow;
+	background-color: yellow;
+	z-index: 2;
+}

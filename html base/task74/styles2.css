@@ -1,0 +1,10 @@
+.parent {
+	display: flex; /* потомки будут флекс элементами */
+	width: 900px;
+	border: 1px solid red;
+}
+.child {
+	width: 120px;
+	height: 100px;
+	border: 1px solid green;
+}   
