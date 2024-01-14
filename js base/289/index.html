@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modifier Keys</title>
+</head>
+<body>
+  <!-- Task 1 -->
+  <button id="elem1">Click Me (Alt Key)</button>
+
+  <!-- Task 2 -->
+  <ul id="elem2">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <script>
+    
+    let elem1 = document.querySelector('#elem1');
+    elem1.addEventListener('click', function (event) {
+      if (event.altKey) {
+        elem1.style.color = 'red';
+      }
+    });
+
+    
+    let elem2 = document.getElementById('elem2');
+    elem2.addEventListener('click', function (event) {
+      let li = event.target;
+
+      if (event.ctrlKey) {
+        li.textContent += '1';
+      }
+
+      if (event.shiftKey) {
+        li.textContent += '2';
+      }
+    });
+  </script>
+</body>
+</html>

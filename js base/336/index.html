@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling Elements</title>
+  <style>
+    p {
+      cursor: pointer;
+      border: 1px solid #ddd;
+      padding: 5px;
+      display: inline-block;
+    }
+
+    a {
+      color: blue;
+      text-decoration: underline;
+      margin-left: 10px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <div id="parent1">
+    <p><span>text1</span><a href="#" class="link">link</a></p>
+    <p><span>text2</span><a href="#" class="link">link</a></p>
+    <p><span>text3</span><a href="#" class="link">link</a></p>
+  </div>
+
+  <script>
+    let parent1 = document.querySelector('#parent1');
+
+    parent1.addEventListener('click', function (event) {
+      let target = event.target;
+      if (target.classList.contains('link')) {
+        let span = target.previousElementSibling;
+        span.style.textDecoration = 'line-through';
+        target.remove();
+      }
+    });
+  </script>
+
+  <!-- Task 2 -->
+  <div id="parent2">
+    <p><span>text1</span><a href="#" class="link2">link</a></p>
+    <p><span>text2</span><a href="#" class="link2">link</a></p>
+    <p><span>text3</span><a href="#" class="link2">link</a></p>
+  </div>
+
+  <script>
+    let parent2 = document.querySelector('#parent2');
+
+    parent2.addEventListener('click', function (event) {
+      let target = event.target;
+      if (target.classList.contains('link2')) {
+        let span = target.previousElementSibling;
+        span.style.textDecoration = 'line-through';
+        target.remove();
+      }
+    });
+  </script>
+
+  <!-- Task 3 -->
+  <table id="table">
+    <tr>
+      <td>Row 1</td>
+      <td>Content 1</td>
+      <td><a href="#" class="row-link">Highlight</a></td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+      <td>Content 2</td>
+      <td><a href="#" class="row-link">Highlight</a></td>
+    </tr>
+    <tr>
+      <td>Row 3</td>
+      <td>Content 3</td>
+      <td><a href="#" class="row-link">Highlight</a></td>
+    </tr>
+  </table>
+
+  <script>
+    let table = document.getElementById('table');
+
+    table.addEventListener('click', function (event) {
+      let target = event.target;
+      if (target.classList.contains('row-link')) {
+        let row = target.closest('tr');
+        row.style.backgroundColor = 'lightgreen';
+      }
+    });
+  </script>
+
+  <!-- Task 4 -->
+  <table id="table2">
+    <tr>
+      <td>Row 1</td>
+      <td>Content 1</td>
+      <td><a href="#" class="toggle-link">Highlight</a></td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+      <td>Content 2</td>
+      <td><a href="#" class="toggle-link">Highlight</a></td>
+    </tr>
+    <tr>
+      <td>Row 3</td>
+      <td>Content 3</td>
+      <td><a href="#" class="toggle-link">Highlight</a></td>
+    </tr>
+  </table>
+
+  <script>
+    let table2 = document.getElementById('table2');
+
+    table2.addEventListener('click', function (event) {
+      let target = event.target;
+      if (target.classList.contains('toggle-link')) {
+        let row = target.closest('tr');
+        if (row.style.backgroundColor === 'lightgreen') {
+          row.style.backgroundColor = '';
+        } else {
+          row.style.backgroundColor = 'lightgreen';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

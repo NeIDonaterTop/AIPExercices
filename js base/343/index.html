@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions for DOM Elements</title>
+</head>
+<body>
+
+  <p class="elem"></p>
+  <p class="elem"></p>
+  <p class="elem"></p>
+
+  <script>
+    
+    function setText(selector, text) {
+      let elems = document.querySelectorAll(selector);
+
+      for (let elem of elems) {
+        elem.textContent = text;
+      }
+    }
+
+    setText('.elem', 'text');
+  </script>
+
+  <script>
+    
+    function appendText(selector, text) {
+      let elems = document.querySelectorAll(selector);
+
+      for (let elem of elems) {
+        elem.textContent += text;
+      }
+    }
+
+    appendText('.elem', ' appended');
+  </script>
+
+</body>
+</html>

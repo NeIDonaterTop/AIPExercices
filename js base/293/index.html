@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handlers for New Elements</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      cursor: pointer;
+      margin: 5px;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+  </ul>
+
+  <button>add</button>
+
+  <script>
+    let button = document.querySelector('button');
+    let list = document.querySelector('ul');
+    let items = list.querySelectorAll('li');
+
+    function handler() {
+      this.innerHTML = this.innerHTML + '!';
+    }
+
+    for (let item of items) {
+      item.addEventListener('click', handler);
+    }
+
+    button.addEventListener('click', function () {
+      let item = document.createElement('li');
+      item.innerHTML = 'item';
+
+      item.addEventListener('click', handler);
+
+      list.appendChild(item);
+    });
+  </script>
+</body>
+</html>

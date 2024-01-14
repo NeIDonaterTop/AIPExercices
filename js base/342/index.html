@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions for DOM Elements</title>
+</head>
+<body>
+
+  <p id="elem1"></p>
+  <p id="elem2"></p>
+
+  <script>
+    
+    function setText(selector, text) {
+      let elem = document.querySelector(selector);
+      elem.textContent = text;
+    }
+
+    setText('#elem1', 'text1');
+    setText('#elem2', 'text2');
+  </script>
+
+  <script>
+    
+    function setAttr(selector, attributeName, attributeValue) {
+      let elem = document.querySelector(selector);
+      elem.setAttribute(attributeName, attributeValue);
+    }
+
+    setAttr('#elem1', 'class', 'highlight');
+    setAttr('#elem2', 'data-value', '123');
+  </script>
+
+</body>
+</html>

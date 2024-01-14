@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Modification</title>
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+  </table>
+
+  <button id="doubleNumbersBtn">Double Numbers</button>
+
+  <script>
+    let tds = document.querySelectorAll('#table td');
+    let doubleNumbersBtn = document.querySelector('#doubleNumbersBtn');
+
+    doubleNumbersBtn.addEventListener('click', function () {
+      for (let td of tds) {
+        let currentNumber = parseInt(td.textContent, 10);
+        td.textContent = currentNumber * 2;
+      }
+    });
+  </script>
+
+</body>
+</html>

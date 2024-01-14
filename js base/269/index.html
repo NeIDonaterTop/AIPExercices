@@ -1,0 +1,143 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercises</title>
+</head>
+<body>
+    <!-- Task 1 -->
+    <label for="input1">Enter text:</label>
+    <input type="text" id="input1">
+    <p id="output1">Result: </p>
+
+    <!-- Task 2 -->
+    <label for="input2_1">Number 1:</label>
+    <input type="text" id="input2_1">
+    <label for="input2_2">Number 2:</label>
+    <input type="text" id="input2_2">
+    <label for="input2_3">Number 3:</label>
+    <input type="text" id="input2_3">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="output2">Result: </p>
+
+    <!-- Task 3 -->
+    <label for="input3">Enter number:</label>
+    <input type="text" id="input3">
+    <p id="output3">Sum of digits: </p>
+
+    <!-- Task 4 -->
+    <label for="input4">Enter numbers (comma-separated):</label>
+    <input type="text" id="input4">
+    <p id="output4">Average: </p>
+
+    <!-- Task 5 -->
+    <label for="input5">Enter full name:</label>
+    <input type="text" id="input5">
+    <input type="text" id="output5_1" readonly>
+    <input type="text" id="output5_2" readonly>
+    <input type="text" id="output5_3" readonly>
+
+    <!-- Task 6 -->
+    <label for="input6">Enter full name (lowercase):</label>
+    <input type="text" id="input6">
+    
+    <!-- Task 7 -->
+    <label for="input7">Enter text:</label>
+    <input type="text" id="input7">
+    <button onclick="countWords()">Count Words</button>
+
+    <!-- Task 8 -->
+    <label for="input8">Enter date (DD.MM.YYYY):</label>
+    <input type="text" id="input8" onblur="formatDate()">
+
+    <!-- Task 9 -->
+    <label for="input9">Enter word:</label>
+    <input type="text" id="input9">
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+
+    <!-- Task 10 -->
+    <label for="input10">Enter number:</label>
+    <input type="text" id="input10" onblur="checkDigit()">
+
+    <!-- Task 11 -->
+    <p id="output11_1">Paragraph 1</p>
+    <p id="output11_2">Paragraph 2</p>
+    <p id="output11_3">Paragraph 3</p>
+    <button onclick="appendNumbers()">Append Numbers</button>
+
+    <!-- Task 12 -->
+    <a href="https://example.com">Link 1</a>
+    <a href="https://google.com">Link 2</a>
+    <a href="https://stackoverflow.com">Link 3</a>
+    <button onclick="addHrefInBrackets()">Add Href in Brackets</button>
+
+    <!-- Task 13 -->
+    <a href="http://example.com">Link 1</a>
+    <a href="https://google.com">Link 2</a>
+    <a href="http://stackoverflow.com">Link 3</a>
+    <button onclick="addArrowToHttpLinks()">Add Arrow to HTTP Links</button>
+
+    <!-- Task 14 -->
+    <p id="output14_1" onclick="squareNumber(this)">4</p>
+    <p id="output14_2" onclick="squareNumber(this)">9</p>
+    <p id="output14_3" onclick="squareNumber(this)">16</p>
+
+    <!-- Task 15 -->
+    <label for="input15">Enter date (DD.MM.YYYY):</label>
+    <input type="text" id="input15" onblur="getDayOfWeek()">
+
+    <!-- Task 16 -->
+    <input type="text" id="input16" value="0">
+    <button onclick="incrementValue()">+1</button>
+    <button onclick="decrementValue()">-1</button>
+
+    <!-- Task 17 -->
+    <div onclick="incrementTotalClicks()">Div 1</div>
+    <div onclick="incrementTotalClicks()">Div 2</div>
+    <div onclick="incrementTotalClicks()">Div 3</div>
+    <p>Total Clicks: <span id="output17">0</span></p>
+
+    <!-- Task 18 -->
+    <div>Some long text here...</div>
+    <div>Another text...</div>
+    <button onclick="truncateText()">Truncate Text</button>
+
+    <!-- Task 19 -->
+    <label for="input19">Enter number (1-100):</label>
+    <input type="text" id="input19" onblur="validateNumber()">
+
+    <!-- Task 20 -->
+    <input type="text" id="input20">
+    <button onclick="generateRandomString()">Generate Random String</button>
+
+    <!-- Task 21 -->
+    <input type="text" id="input21">
+    <button onclick="shuffleString()">Shuffle String</button>
+
+    <!-- Task 22 -->
+    <label for="input22">Enter temperature (°F):</label>
+    <input type="text" id="input22">
+    <button onclick="convertToFahrenheit()">Convert to Celsius</button>
+    <p id="output22">Temperature in °C: </p>
+
+    <!-- Task 23 -->
+    <label for="input23">Enter a number:</label>
+    <input type="text" id="input23">
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <p id="output23">Factorial: </p>
+
+    <!-- Task 24 -->
+    <label for="input24_a">Coefficient a:</label>
+    <input type="text" id="input24_a">
+    <label for="input24_b">Coefficient b:</label>
+    <input type="text" id="input24_b">
+    <label for="input24_c">Coefficient c:</label>
+    <input type="text" id="input24_c">
+    <button onclick="calculateQuadraticEquation()">Calculate Roots</button>
+    <p id="output24">Roots: </p>
+
+    <script src="script.js"></script>
+</body>
+</html>

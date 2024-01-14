@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capture and Bubble Events</title>
+  <style>
+    div {
+      padding: 20px;
+      border: 1px solid red;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="elem1">Green</div>
+  <div id="elem2">Blue</div>
+  <div id="elem3">Red</div>
+
+  <script>
+    let elem1 = document.querySelector('#elem1');
+    let elem2 = document.querySelector('#elem2');
+    let elem3 = document.querySelector('#elem3');
+
+    elem1.addEventListener('click', function () {
+      console.log('Green - Capture');
+    }, true);
+    elem1.addEventListener('click', function () {
+      console.log('Green - Bubble');
+    }, false);
+
+    elem2.addEventListener('click', function () {
+      console.log('Blue - Capture');
+    }, true);
+    elem2.addEventListener('click', function () {
+      console.log('Blue - Bubble');
+    }, false);
+
+    elem3.addEventListener('click', function () {
+      console.log('Red - Capture');
+    }, true);
+    elem3.addEventListener('click', function () {
+      console.log('Red - Bubble');
+    }, false);
+  </script>
+</body>
+</html>

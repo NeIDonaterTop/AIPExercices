@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textarea Exercise</title>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <textarea id="textarea1"></textarea>
+  <p id="output1"></p>
+
+  <script>
+    
+    var textarea1 = document.getElementById('textarea1');
+    var output1 = document.getElementById('output1');
+
+    textarea1.addEventListener('blur', function() {
+      output1.textContent = this.value;
+    });
+  </script>
+
+</body>
+</html>

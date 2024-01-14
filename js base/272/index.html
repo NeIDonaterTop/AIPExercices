@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disabled Attribute Exercise</title>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <input type="text" id="input1">
+  <button onclick="disableInput1()">Disable Input</button>
+
+  <!-- Task 2 -->
+  <input type="text" id="input2">
+  <button onclick="disableInput2()">Disable</button>
+  <button onclick="enableInput2()">Enable</button>
+
+  <!-- Task 3 -->
+  <input type="text" id="input3">
+  <button onclick="checkIfDisabled()">Check Disabled</button>
+
+  <script>
+    
+    function disableInput1() {
+      document.getElementById('input1').disabled = true;
+    }
+
+    
+    function disableInput2() {
+      document.getElementById('input2').disabled = true;
+    }
+
+    function enableInput2() {
+      document.getElementById('input2').disabled = false;
+    }
+
+    
+    function checkIfDisabled() {
+      var isDisabled = document.getElementById('input3').disabled;
+      console.log(isDisabled);
+    }
+  </script>
+
+</body>
+</html>

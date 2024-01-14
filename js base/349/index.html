@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Table Function</title>
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    function createTable(rows, cols) {
+      let table = document.createElement('table');
+
+      for (let i = 0; i < rows; i++) {
+        let row = document.createElement('tr');
+
+        for (let j = 0; j < cols; j++) {
+          let cell = document.createElement('td');
+          row.appendChild(cell);
+        }
+
+        table.appendChild(row);
+      }
+
+      return table;
+    }
+
+    
+    let div = document.querySelector('#elem');
+    let table1 = createTable(3, 4);
+    table1.style.color = 'red';
+    div.appendChild(table1);
+
+    
+    let div2 = document.querySelector('#elem');
+    let table2 = createTable(2, 2);
+    div2.appendChild(table2);
+  </script>
+
+</body>
+</html>

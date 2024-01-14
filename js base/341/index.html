@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <ul id="list1"></ul>
+
+  <script>
+    
+    let list1 = document.querySelector('#list1');
+    let array1 = ['Item 1', 'Item 2', 'Item 3'];
+
+    for (let item of array1) {
+      let li = document.createElement('li');
+      li.textContent = item;
+      list1.appendChild(li);
+    }
+  </script>
+
+  <!-- Task 2 -->
+  <ul id="list2"></ul>
+
+  <script>
+    
+    let list2 = document.querySelector('#list2');
+    let array2 = ['Item 1', 'Item 2', 'Item 3'];
+
+    for (let item of array2) {
+      let li = document.createElement('li');
+      li.textContent = item;
+      list2.appendChild(li);
+
+      li.addEventListener('click', function () {
+        let input = document.createElement('input');
+        input.value = this.textContent;
+
+        this.textContent = '';
+        this.appendChild(input);
+
+        input.addEventListener('blur', function () {
+          li.textContent = this.value;
+        });
+      });
+    }
+  </script>
+
+  <!-- Task 3 -->
+  <ul id="list3"></ul>
+  <input type="text" id="newItemText">
+  <button onclick="addItem()">Add Item</button>
+
+  <script>
+    
+    let list3 = document.querySelector('#list3');
+
+    function addItem() {
+      let newItemText = document.querySelector('#newItemText').value;
+      let li = document.createElement('li');
+      li.textContent = newItemText;
+      list3.appendChild(li);
+
+      li.addEventListener('click', function () {
+        let input = document.createElement('input');
+        input.value = this.textContent;
+
+        this.textContent = '';
+        this.appendChild(input);
+
+        input.addEventListener('blur', function () {
+          li.textContent = this.value;
+        });
+      });
+    }
+  </script>
+
+  <!-- Task 4 -->
+  <ul id="list4"></ul>
+
+  <script>
+    
+    let list4 = document.querySelector('#list4');
+    let array4 = ['Item 1', 'Item 2', 'Item 3'];
+
+    for (let item of array4) {
+      let li = document.createElement('li');
+      li.textContent = item;
+
+      let deleteLink = document.createElement('a');
+      deleteLink.href = '#';
+      deleteLink.textContent = 'delete';
+      deleteLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        li.remove();
+      });
+
+      li.appendChild(deleteLink);
+      list4.appendChild(li);
+
+      li.addEventListener('click', function () {
+        let input = document.createElement('input');
+        input.value = this.textContent;
+
+        this.textContent = '';
+        this.appendChild(input);
+
+        input.addEventListener('blur', function () {
+          li.textContent = this.value;
+        });
+      });
+    }
+  </script>
+
+  <!-- Task 5 -->
+  <ul id="list5"></ul>
+
+  <script>
+    
+    let list5 = document.querySelector('#list5');
+    let array5 = ['Item 1', 'Item 2', 'Item 3'];
+
+    for (let item of array5) {
+      let li = document.createElement('li');
+      li.textContent = item;
+
+      let deleteLink = document.createElement('a');
+      deleteLink.href = '#';
+      deleteLink.textContent = 'delete';
+      deleteLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        li.remove();
+      });
+
+      let strikeLink = document.createElement('a');
+      strikeLink.href = '#';
+      strikeLink.textContent = 'strike';
+      strikeLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        li.classList.toggle('strikethrough');
+      });
+
+      li.appendChild(deleteLink);
+      li.appendChild(strikeLink);
+      list5.appendChild(li);
+
+      li.addEventListener('click', function () {
+        let input = document.createElement('input');
+        input.value = this.textContent;
+
+        this.textContent = '';
+        this.appendChild(input);
+
+        input.addEventListener('blur', function () {
+          li.textContent = this.value;
+        });
+      });
+    }
+  </script>
+
+  <!-- Task 6 -->
+  <table id="table1"></table>
+
+  <script>
+    
+    let table1 = document.querySelector('#table1');
+    let employees1 = [
+      { name: 'employee1', age: 30, salary: 400 },
+      { name: 'employee2', age: 31, salary: 500 },
+      { name: 'employee3', age: 32, salary: 600 },
+    ];
+
+    let header1 = document.createElement('tr');
+    header1.innerHTML = '<th>Name</th><th>Age</th><th>Salary</th>';
+    table1.appendChild(header1);
+
+    for (let employee of employees1) {
+      let row = document.createElement('tr');
+      row.innerHTML = `<td>${employee.name}</td><td>${employee.age}</td><td>${employee.salary}</td>`;
+      table1.appendChild(row);
+
+      for (let cell of row.children) {
+        cell.addEventListener('click', function () {
+          let input = document.createElement('input');
+          input.value = this.textContent;
+          this.textContent = '';
+          this.appendChild(input);
+
+          input.addEventListener('blur', function () {
+            cell.textContent = this.value;
+          });
+        });
+      }
+    }
+  </script>
+
+  <!-- Task 7 -->
+  <table id="table2"></table>
+
+  <script>
+    
+    let table2 = document.querySelector('#table2');
+    let employees2 = [
+      { name: 'employee1', age: 30, salary: 400 },
+      { name: 'employee2', age: 31, salary: 500 },
+      { name: 'employee3', age: 32, salary: 600 },
+    ];
+
+    let header2 = document.createElement('tr');
+    header2.innerHTML = '<th>Name</th><th>Age</th><th>Salary</th>';
+    table2.appendChild(header2);
+
+    for (let employee of employees2) {
+      let row = document.createElement('tr');
+      row.innerHTML = `<td>${employee.name}</td><td>${employee.age}</td><td>${employee.salary}</td>`;
+      table2.appendChild(row);
+
+      for (let cell of row.children) {
+        cell.addEventListener('click', function () {
+          let input = document.createElement('input');
+          input.value = this.textContent;
+          this.textContent = '';
+          this.appendChild(input);
+
+          input.addEventListener('blur', function () {
+            cell.textContent = this.value;
+          });
+        });
+      }
+
+      let deleteLink = document.createElement('a');
+      deleteLink.href = '#';
+      deleteLink.textContent = 'delete';
+      deleteLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        row.remove();
+      });
+
+      row.appendChild(deleteLink);
+    }
+  </script>
+
+  <!-- Task 8 -->
+  <table id="

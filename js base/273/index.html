@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkbox Exercise</title>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <input type="checkbox" id="checkbox1">
+  <button onclick="checkCheckbox1()">Check</button>
+  <button onclick="uncheckCheckbox1()">Uncheck</button>
+
+  <!-- Task 2 -->
+  <input type="checkbox" id="checkbox2">
+  <button onclick="displayText()">Display Text</button>
+  <p id="output2"></p>
+
+  <script>
+    
+    function checkCheckbox1() {
+      document.getElementById('checkbox1').checked = true;
+    }
+
+    function uncheckCheckbox1() {
+      document.getElementById('checkbox1').checked = false;
+    }
+
+    
+    function displayText() {
+      var checkbox2 = document.getElementById('checkbox2');
+      var output2 = document.getElementById('output2');
+
+      if (checkbox2.checked) {
+        output2.textContent = 'привет';
+      } else {
+        output2.textContent = 'пока';
+      }
+    }
+  </script>
+
+</body>
+</html>

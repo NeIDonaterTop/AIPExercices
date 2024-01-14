@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit and Remove Elements</title>
+  <style>
+    p {
+      cursor: pointer;
+      border: 1px solid #ddd;
+      padding: 5px;
+      display: inline-block;
+    }
+
+    a {
+      color: red;
+      text-decoration: underline;
+      margin-left: 10px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <div id="parent1">
+    <p><span>text1</span></p>
+    <p><span>text2</span></p>
+    <p><span>text3</span></p>
+  </div>
+
+  <script>
+    let parent1 = document.querySelector('#parent1');
+
+    parent1.addEventListener('click', function (event) {
+      let target = event.target;
+      if (target.tagName === 'SPAN') {
+        let input = document.createElement('input');
+        input.value = target.textContent;
+
+        target.textContent = '';
+        target.appendChild(input);
+
+        input.addEventListener('blur', function () {
+          target.textContent = this.value;
+          target.addEventListener('click', clickHandler);
+        });
+
+        target.removeEventListener('click', clickHandler);
+      }
+    });
+
+    function clickHandler() {
+      let span = document.createElement('span');
+      span.textContent = 'text';
+      let removeLink = document.createElement('a');
+      removeLink.href = '';
+      removeLink.textContent = 'remove';
+      span.appendChild(removeLink);
+      parent2.appendChild(span);
+    }
+  </script>
+
+  <!-- Task 2 -->
+  <div id="parent2">
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+  </div>
+
+  <script>
+    let parent2 = document.querySelector('#parent2');
+
+    for (let paragraph of parent2.querySelectorAll('p')) {
+      let span = document.createElement('span');
+      span.textContent = paragraph.textContent;
+      paragraph.textContent = '';
+      paragraph.appendChild(span);
+
+      span.addEventListener('click', function () {
+        let input = document.createElement('input');
+        input.value = span.textContent;
+
+        span.textContent = '';
+        span.appendChild(input);
+
+        input.addEventListener('blur', function () {
+          span.textContent = this.value;
+          span.addEventListener('click', clickHandler);
+        });
+
+        span.removeEventListener('click', clickHandler);
+      });
+
+      let removeLink = document.createElement('a');
+      removeLink.href = '';
+      removeLink.textContent = 'remove';
+      paragraph.appendChild(removeLink);
+    }
+
+    function clickHandler() {
+      let span = document.createElement('span');
+      span.textContent = 'text';
+      let removeLink = document.createElement('a');
+      removeLink.href = '';
+      removeLink.textContent = 'remove';
+      span.appendChild(removeLink);
+      parent2.appendChild(span);
+    }
+  </script>
+
+</body>
+</html>
